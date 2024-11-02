@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get More Info - Fit for Fun Fitness Club</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="classes.html">Classes Offered</a></li>
+            <li><a href="info.html">Get More Info</a></li>
+        </ul>
+    </nav>
+
+    <!-- Information Request Form -->
+    <section>
+        <h2>Sign Up for More Information</h2>
+        <form action="thankyou.html" method="get">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="contactMethod">Best Way to Reach You:</label>
+            <select id="contactMethod" name="contactMethod">
+                <option value="email">Email</option>
+                <option value="phone">Phone</option>
+                <option value="owl">Owl</option>
+            </select>
+
+<!-- Classes Interested In Section -->
+<p>Classes Interested In:</p>
+<div class="checkbox-group">
+    <label><input type="checkbox" id="yoga" name="classes" value="Yoga"> Yoga</label>
+    <label><input type="checkbox" id="spin" name="classes" value="Spin"> Spin</label>
+    <label><input type="checkbox" id="hiit" name="classes" value="HIIT"> HIIT</label>
+</div>
+
+<!-- Preferred Time Section -->
+<p>Preferred Time:</p>
+<div class="radio-group">
+    <label><input type="radio" id="am" name="time" value="AM"> AM</label>
+    <label><input type="radio" id="pm" name="time" value="PM"> PM</label>
+</div>
+
+        <button type="submit">Submit</button>
+        </form>
+    </section>
+</body>
+</html>
