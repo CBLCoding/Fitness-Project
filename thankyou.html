@@ -1,31 +1,52 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <script  type="text/javascript"  src="https://instructure-uploads.s3.amazonaws.com/a3ppd9VMGjB8_e3mcYGe8gtx0sEOWoEzUIzBuguBgFou4T7bIIOFuWhwUVOFjx9YR2sowKVqNWir6BNYaGvGdQ=="></script><script>
-    function printQuery() {
-      var query = window.location.search.substring(1);
-      var vars = query.split("&");
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Fit for Fun Fitness Club</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function printQuery() {
+            var query = window.location.search.substring(1);
+            var vars = query.split("&");
 
-      for (var i = 0; i < vars.length; i++) {
-        var pair = vars[i].split("=");
-          document.write(pair[0] + ": " + pair[1] + "<br />");
-      }
-    }
-  </script>
-  <link rel="stylesheet" href="static/styles.css" />
-  <title></title>
+            var output = "<ul>";
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split("=");
+                output += "<li><strong>" + decodeURIComponent(pair[0]) + ":</strong> " + decodeURIComponent(pair[1]) + "</li>";
+            }
+            output += "</ul>";
+            document.getElementById("formDataDisplay").innerHTML = output;
+        }
+    </script>
 </head>
 
 <body>
-  <div class="container">
-    <h2>Thank you for requesting an appt! We will be in touch soon!</h2>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="classes.html">Classes Offered</a></li>
+            <li><a href="info.html">Get More Info</a></li>
+        </ul>
+    </nav>
 
+    <!-- Main Content -->
+    <div class="container">
+        <h2>Thank You for Requesting Information!</h2>
+        <p>We appreciate your interest and will get in touch with you soon. Here’s a summary of your submission:</p>
+
+        <!-- Display Form Data -->
+        <div id="formDataDisplay"></div>
+
+        <a href="index.html" class="button">Return to Home</a>
+    </div>
+
+    <!-- Run the Query Display Script -->
     <script>
-      printQuery();
+        printQuery();
     </script>
-  </div>
 </body>
 
 </html>
